@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Apapachables - Todo en uno</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%);
+      color: #3e1f1f;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #6a0572;
+      color: #f8f0fc;
+      padding: 2.5rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(106, 5, 114, 0.6);
+      user-select: none;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 0.12em;
+      font-weight: 800;
+      margin-bottom: 0.3rem;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 6px #4b004b;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-style: italic;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      color: #d9b3d9;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      background: #9c27b0;
+      padding: 1rem 0;
+      box-shadow: 0 3px 10px rgba(156, 39, 176, 0.6);
+      font-weight: 700;
+      text-transform: uppercase;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      user-select: none;
+    }
+
+    nav a {
+      color: #f3e5f5;
+      font-size: 1.1rem;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      transition: background-color 0.3s ease, transform 0.25s ease;
+      box-shadow: 0 0 8px transparent;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      background-color: #7b1fa2;
+      box-shadow: 0 0 12px #e1bee7;
+      transform: scale(1.15);
+      outline: none;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 3rem auto 4rem;
+      padding: 0 1rem;
+      user-select: text;
+    }
+
+    section {
+      background: #f3e5f5;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(156, 39, 176, 0.3);
+      padding: 2rem 2.5rem;
+      margin-bottom: 4rem;
+    }
+
+    section h2 {
+      color: #6a0572;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 2rem;
+      user-select: text;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: #4a235a;
+      user-select: text;
+    }
+
+    section ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 0 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 1rem;
+      user-select: text;
+    }
+
+    section ul li {
+      background: #e9d7f1;
+      border-radius: 15px;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 4px 8px rgba(156, 39, 176, 0.3);
+      font-weight: 600;
+      color: #7b1fa2;
+    }
+
+    /* Buttons */
+    .back-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      color: #6a0572;
+      text-decoration: none;
+      font-weight: 700;
+      border: 2px solid #6a0572;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+
+    .back-btn:hover,
+    .back-btn:focus {
+      background-color: #7b1fa2;
+      color: #f8f0fc;
+      outline: none;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.4rem;
+      }
+
+      nav {
+        gap: 1.5rem;
+        font-size: 0.95rem;
+      }
+
+      main {
+        margin: 2rem auto 3rem;
+      }
+
+      section {
+        padding: 1.5rem 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Apapachables</h1>
+  <p>Papas Turcas que te alegran el día</p>
+</header>
+
+<nav>
+  <a href="#que-son" tabindex="1">¿Qué son?</a>
+  <a href="#mision-vision" tabindex="2">Misión & Visión</a>
+  <a href="#menu" tabindex="3">Menú Favorito</a>
+  <a href="#toppings" tabindex="4">Toppings</a>
+</nav>
+
+<main>
+  <section id="que-son" tabindex="0" aria-label="¿Qué son las Apapachables?">
+    <h2>¿Qué son las Apapachables?</h2>
+    <p>Las Apapachables son papas turcas artesanales, preparadas cuidadosamente para ofrecer un sabor inigualable. Son crujientes por fuera y suaves por dentro, elaboradas con ingredientes frescos y naturales.</p>
+    <p>Nos enorgullece la receta secreta de nuestras salsas y condimentos que complementan perfectamente cada bocado, brindando una experiencia única y deliciosa.</p>
+    <p>Ideal para cualquier ocasión, nuestras Apapachables son la combinación perfecta de tradición y creatividad.</p>
+  </section>
+
+  <section id="mision-vision" tabindex="0" aria-label="Misión y Visión">
+    <h2>Misión & Visión</h2>
+    <h3>Misión</h3>
+    <p>Ofrecer papas turcas artesanales con un sabor único y accesible, que alegren el día de nuestros clientes, generando momentos de felicidad y unión.</p>
+    <h3>Visión</h3>
+    <p>Ser reconocidos como líderes en innovación y calidad en el mercado de papas turcas, llevando nuestro amor y dedicación a cada rincón del país y más allá.</p>
+  </section>
+
+  <section id="menu" tabindex="0" aria-label="Menú Favorito">
+    <h2>Menú Favorito</h2>
+    <ul>
+      <li><strong>Papucheese:</strong> Papas con queso derretido.</li>
+      <li><strong>Papubacon:</strong> Con queso derretido y tocino crocante.</li>
+      <li><strong>Papumeat:</strong> Con carne molida sazonada con especias especiales.</li>
+    </ul>
+  </section>
+
+  <section id="toppings" tabindex="0" aria-label="Toppings Deliciosos">
+    <h2>Toppings Deliciosos</h2>
+    <ul>
+      <li>Salsa BBQ</li>
+      <li>Dip de cebolla</li>
+      <li>Dip de queso y chile</li>
+     
+    </ul>
+  </section>
+</main>
+
+<footer style="background:#6a0572; color:#f8f0fc; text-align:center; padding:1.5rem; font-weight:600; letter-spacing:0.05em; box-shadow:0 -5px 15px rgba(106,5,114,0.7); user-select:none;">
+  &copy; 2025 Apapachables. Todos los derechos reservados.
+</footer>
+
+</body>
+</html>
